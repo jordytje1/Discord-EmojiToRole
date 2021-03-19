@@ -6,11 +6,11 @@ import config from "./config.json"
 
 //Fetch messages that need to be tracked and cache them.
 import fetchMessages from "./src/load"
-fetchMessages(bot, config)
+fetchMessages(config)
 
 //Start tracking messages by hooking an event listener to them
 import track from "./src/track"
-track(bot, config)
+track(config)
 
 bot.login(process.env.BOT_TOKEN);
 	.then(() => {
